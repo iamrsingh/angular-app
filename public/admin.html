@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <body ng-controller="AdminController">
+    <div class="container">
+        <input type="button" value="Logout" style="float: right;" ng-click="logout()"></br>
+        <h2>Welcome 	Admin</h2></br>
+        <h3>Availalbe Policies</h3></br>
+        <form name="upd_form" role="form" novalidate>
+            <table class="table-bordered" align="center">
+                <tr>
+                    <th class="text-center" >S.No.</th>
+                    <th class="text-center" >Policy Name</th>
+                    <th class="text-center" >Policy Detail</th>
+                </tr>
+                <tr ng-repeat="y in PolicyData">
+                    <td align="center"  nowrap>{{$index+1}}</td>
+                    <td align="center"  nowrap>{{PolicyData[$index][0]}}</td>
+                    <td align="center"  style="width: 500px" nowrap>
+                        <input type="text" class="form-control" ng-model="PolicyData[$index][1]" required>
+                    </td>
+                </tr>
+            </table></br>
+            <input type="button" value="Save" style="float: right;" ng-click="save(upd_form)"></br>
+        </form>
+    </div>
+    </body>
+</html>

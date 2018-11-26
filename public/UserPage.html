@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="UserController" as mainn>
+    <div class="container">
+        <form align="right" name="UPolicy" role="form" novalidate>
+            <td><button ng-click="logout(UPolicy)">Logout</button></td>
+        </form>
+        <p>Welcome {{User}}</p>
+        <p>Available Policies</p>
+        <table align="center" class="table-bordered">
+            <tr>
+                <th align="center" border="1px solid black">Policy Name</th>
+                <th align="center" border="1px solid black">Policy Detail</th>
+            </tr>
+            <tr ng-repeat="y in PolicyData">
+                <td align="center" border="1px solid black">{{y[0]}}</td>
+                <td align="center" border="1px solid black">{{y[1]}}</td>
+            </tr>
+        </table>
+
+        <p>{{User}}   Policy Details</p>
+        <table align="center" class="table-bordered">
+            <tr>
+                <th align="center" border="1px solid black">Policy Name</th>
+                <th align="center" border="1px solid black">Amount Paid</th>
+                <th align="center" border="1px solid black">Policy End Date</th>
+                <th align="center" border="1px solid black">Valid</th>
+            </tr>
+            <tr ng-repeat="x in UserData">
+                <td align="center" border="1px solid black">{{x[0]}}</td>
+                <td align="center" border="1px solid black">{{x[1]}}</td>
+                <td align="center" border="1px solid black">{{x[2]}}</td>
+                <td align="center" border="1px solid black">{{x[3]}} </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

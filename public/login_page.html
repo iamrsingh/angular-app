@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="MainController as main">
+<div class="container">
+    <ul class="nav1">
+        <li><a ui-sref="state3">Register</a></li>
+        <li><a ui-sref="state5">About Us</a></li>
+        <li><a ui-sref="state5">Contact Us</a></li>
+    </ul>
+    <p class="NUser">New User? </p>
+    <p> </p>
+
+        <p class="Welcome">Welcome to the site </p>
+        <form name="login" role="form" novalidate>
+            <table align="center">
+                <tr>
+                    <td>User ID</td>
+                    <td><input type="text" ng-model="user.uid" required></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" ng-model="user.upswd" required></td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+                    <td><button ng-click="submitForm(login)">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+</div>
+</body>
+</html>

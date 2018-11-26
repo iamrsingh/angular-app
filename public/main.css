@@ -1,0 +1,110 @@
+div.first{
+	box-sizing: border-box;
+	border:#999999 1px solid;
+	border-radius: 8px;
+	padding: 0 16px 16px 16px;
+	margin: 0 auto 0 auto;
+	width: 65%;
+	background-color: #ddffdd;
+}
+
+div.header {
+	box-sizing: border-box;
+	border:#999999 1px solid;
+	border-radius: 8px;
+	padding: 0 16px 16px 16px;
+	margin: 0 auto 0 auto;
+	width: 65%;
+	text-align: center;
+	background-color: #ddffdd;
+   }
+
+.nav1 li{
+	display: inline;
+	text-decoration: underline;
+	padding: 0 auto 0 auto;
+	margin: 0 auto 0 50px;
+}
+
+.NUser {
+	 	color: #0000FF;
+		margin: 0 0 0 80px;
+		padding: 0 0 0 auto;
+	}
+
+.Welcome {
+		padding: 30px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+li.Home {
+		padding: 0 auto 0 auto;
+		margin:  0 auto 0 50em;
+		text-align: center;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+.CInfo{
+		padding: 0 auto 0 auto;
+		margin:  0 auto 0 auto;
+		font-weight: bold;
+		text-align: center;
+	}
+
+.We1come1{
+	padding: 0 auto 0 auto;
+	margin:  0 auto 0 auto;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+}
+
+a:hover {
+	color: #8b8515;
+	}
+
+button {
+	background: #dddddd;
+}
+
+table {
+	table-layout: fixed;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.PMS {
+	padding: 0 16px 16px 16px;
+	margin: 30px auto 0 auto;
+	font-size: 30px;
+	text-align: center;
+	font: bolder;
+}
+
+input {
+	padding: 1px 8px 1px 8px;
+	border: 1px solid #888888;
+}
+
+input.ng-dirty.ng-valid {
+	background: #ddffdd;
+}
+
+input.ng-dirty.ng-invalid {
+	background: #ffdddd;
+}
+
+.table-bordered {
+	border: #999999 1px solid;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+	border: #999999 1px solid;
+}

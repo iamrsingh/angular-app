@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+ <head>
+	<link type="text/css" rel="stylesheet" href="main.css">
+	<script src="angular.js"></script>
+     <script src="angular-ui-router.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="app.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ 	<div class="header">
+		<h1 align="center"> Policy Management System </h1>
+	</div>
+	<body ng-controller="MainController as main">
+	<div class="first">
+		<ui-view>
+		<ul class="nav1">
+			<li><a ui-sref="state3">Register</a></li>
+			<li><a ui-sref="state5">About Us</a></li>
+			<li><a ui-sref="state5">Contact Us</a></li>
+			<li><a ui-sref="state1">Login</a></li>
+		</ul>
+			<p class="NUser">New User? </p>
+			<p> </p></br>
+			<p> </p></br>
+			<p> </p></br>
+			<p class="We1come1">Welcome to the site </p>
+			<p> </p></br>
+			<p> </p></br>
+			<p> </p></br>
+	</ui-view>
+	</div>
+	</body>
+</html>

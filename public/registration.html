@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+ <head>
+	 <link type="text/css" rel="stylesheet" href="main.css">
+	 <script src="angular.js"></script>
+	 <script src="angular-ui-router.js"></script>
+	 <script src="app.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+	<body ng-controller="RegController as Reg">
+		<div class="container">
+			<p class="Home"><a ui-sref="state1">Home</a></p>
+			<p class="CInfo">Customer Information</p>
+			<form name="reg_form" role="form" novalidate>
+				<table class="regtab" align="center">
+						<tr>
+							<td>First Name</td>
+							<td><input type="text" ng-model="user.fname" required></td>
+						</tr>
+
+						<tr>
+							<td>Last Name</td>
+							<td><input type="text" ng-model="user.lname" required></td>
+						</tr>
+
+						<tr>
+							<td>Date of Birth</td>
+							<td><input type="date" ng-model="user.dob" required></td>
+						</tr>
+
+						<tr>
+							<td>Address</td>
+							<td><input type="text" ng-model="user.addr" required></td>
+						</tr>
+
+						<tr>
+							<td>Phone No</td>
+							<td><input type="text" ng-model="user.phno" required ng-minlength="10" ng-maxlength="10"></td>
+						</tr>
+
+						<tr>
+							<td>Email Address</td>
+							<td><input type="email" ng-model="user.eml" required></td>
+						</tr>
+
+						<tr>
+							<td>Password</td>
+							<td><input type="text" ng-model="user.pwd" required></td>
+						</tr>
+
+						<tr>
+							<td>Confirm Password</td>
+							<td><input type="password" ng-model="user.cpwd" required></td>
+						</tr>
+
+						<tr>
+							<td>&nbsp;</td>
+							<td><button ng-click="resetForm(reg_form)">Reset</button></td>
+						</tr>
+
+						<tr>
+							<td>&nbsp;</td>
+							<td><button ng-click="submitForm(reg_form)">Submit</button></td>
+						</tr>
+				</table>
+			</form>
+			<p>{{printmsg + " " + UserID}} </p>
+		</div>
+	</body>
+</html>
